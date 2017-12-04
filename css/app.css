@@ -79,6 +79,7 @@ button:active { background: rgb(152,15,0); } /* при нажатии */
 	font-size:large; 
 	padding:0; 
 	margin:0;
+	color:black;
  }
  
  p2{
@@ -93,9 +94,21 @@ button:active { background: rgb(152,15,0); } /* при нажатии */
 	font-size:small;
 	padding:0; 
 	margin:0;
+	color:black;
  }
- 
- 
+  p4{
+	  font-weight:bold; 
+	font-size:small;
+	padding:0; 
+	margin:0;
+	color:black;
+ }
+ p5{
+	font-size:large; 
+	padding:0; 
+	margin:0;
+	color:black;
+ }
  table {
     width: 98%; /* Ширина таблицы */
     background: white; /* Цвет фона таблицы */
@@ -119,5 +132,27 @@ button:active { background: rgb(152,15,0); } /* при нажатии */
     tr:hover td{
 	   background: #E8E8E8;
    }
+   
+   ul {
+  list-style: none; /*убираем маркеры списка*/
+  margin: 0; /*убираем отступы*/
+  padding-left: 0; /*убираем отступы*/
+  height: 30px; /*задаем высоту*/
+}
+li a {
+  text-decoration: none; /*убираем подчеркивание текста ссылок*/
+  color: white; /*меняем цвет ссылок*/
+  padding:0px 15px; /*добавляем отступ*/
+  font-family: arial; /*меняем шрифт*/
+  line-height:30px; /*ровняем меню по вертикали*/
+  display: block; 
+  /*border-right: 1px solid #F36262;*/ /*добавляем бордюр справа*/
+  -moz-transition: all 0.3s 0.01s ease; /*делаем плавный переход*/
+  -o-transition: all 0.3s 0.01s ease;
+  -webkit-transition: all 0.3s 0.01s ease;
+}
+li {
+  float:left; /*Размещаем список горизонтально для реализации меню*/
+}
    
  
