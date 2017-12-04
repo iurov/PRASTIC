@@ -1,0 +1,17 @@
+На создание читателей (readers)
+CREATE TABLE `ENDLESS_LIBRARY`.`readers` ( `id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(200) NULL DEFAULT NULL , `email` VARCHAR(200) NULL DEFAULT NULL , `phone` VARCHAR(200) NULL DEFAULT NULL , PRIMARY KEY (`id`));
+
+На создание таблицы книг (books)
+CREATE TABLE `ENDLESS_LIBRARY`.`books` ( `id` INT NOT NULL AUTO_INCREMENT , `author` VARCHAR(200) NULL DEFAULT NULL , `title` VARCHAR(200) NULL DEFAULT NULL , `id_genre` INT(11) NULL DEFAULT NULL , `price` INT(11) NULL DEFAULT NULL , `amount` INT(11) NULL DEFAULT NULL , PRIMARY KEY (`id`));
+Заполняет таблицу жарнов (books)
+INSERT INTO `books` (`id`, `author`, `title`, `id_genre`, `price`, `amount`) VALUES (NULL, 'Как папа был маленьким', 'Александр Борисович Раскин', '1', '100',
+INSERT INTO `books` (`id`, `author`, `title`, `id_genre`, `price`, `amount`) VALUES (NULL, 'Григорий Бенционович Остер', 'Вредные советы 3', '1', '80', '15');
+INSERT INTO `books` (`id`, `author`, `title`, `id_genre`, `price`, `amount`) VALUES (NULL, 'Григорий Бенционович Остер 2', 'Вредные советы 3', '1', '80', '15'); '10');
+INSERT INTO `books` (`id`, `author`, `title`, `id_genre`, `price`, `amount`) VALUES (NULL, 'Григорий Бенционович Остер 3', 'Вредные советы 3', '1', '80', '15');
+
+На создание таблицы жанров (genre)
+CREATE TABLE `ENDLESS_LIBRARY`.`genre` ( `id` INT NOT NULL AUTO_INCREMENT , `name` VARCHAR(200) DEFAULT NULL , PRIMARY KEY (`id`));
+Заполняем таблицу жанров (genre)
+INSERT INTO `genre` (`id`, `name`) VALUES (NULL, 'Рассказы'), (NULL, 'Поэзия');
+INSERT INTO `genre` (`id`, `name`) VALUES (NULL, 'Ужасы'), (NULL, 'Публицистика'), (NULL, 'Драма'), (NULL, 'Словари');
+

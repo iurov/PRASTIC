@@ -1,0 +1,30 @@
+.header {
+    background-color: #EF717A;
+}
+
+.header_image {
+    width: 60%;
+	padding:1%; /*Внутри*/
+	/*margin:1%;*/ /*Снаружи*/
+}
+
+.header_menu {
+    background-color: #EF717A;
+}
+
+.breadcrumbs {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+h1.title-page {
+    margin-bottom: 35px;
+}
+
+.content h1, .h1, .inner h1, .title-bread h1 {
+    font-size: 30px;
+    color: #0067b1;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
