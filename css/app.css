@@ -44,12 +44,13 @@ input:-ms-input-placeholder {
   background: #E0EFCA;
 }
 button {
-  color: #fff; /* цвет текста */
-  text-decoration: none; /* убирать подчёркивание у ссылок */
-  user-select: none; /* убирать выделение текста */
-  background: rgb(212,75,56); /* фон кнопки */
-  padding: .7em 1.5em; /* отступ от текста */
-  outline: none; /* убирать контур в Mozilla */
+	color: #fff; /* цвет текста */
+	text-decoration: none; /* убирать подчёркивание у ссылок */
+	user-select: none; /* убирать выделение текста */
+	font-weight:bold;
+	background: rgb(66,146,211); /* фон кнопки */
+	padding: .7em 1.5em; /* отступ от текста */
+	outline: none; /* убирать контур в Mozilla */
 } 
 button:hover { background: rgb(232,95,76); } /* при наведении курсора мышки */
 button:active { background: rgb(152,15,0); } /* при нажатии */
@@ -71,3 +72,52 @@ button:active { background: rgb(152,15,0); } /* при нажатии */
   
     background: #BABBBD; /* Цвет фона */
  }
+ 
+ 
+ p1{
+	font-weight:bold; 
+	font-size:large; 
+	padding:0; 
+	margin:0;
+ }
+ 
+ p2{
+	font-weight:bold; 
+	font-size:medium;
+	padding:0; 
+	margin:0; 
+	color:grey;	
+ }
+ 
+ p3{
+	font-size:small;
+	padding:0; 
+	margin:0;
+ }
+ 
+ 
+ table {
+    width: 98%; /* Ширина таблицы */
+    background: white; /* Цвет фона таблицы */
+    color: black; /* Цвет текста */
+	border: 1px solid black;
+    border-collapse: collapse;
+	margin:1%;
+	height: 1.5em;
+	cursor: pointer;
+   }
+   td, th {
+	   height: 1.5em;
+     background: white; /* Цвет фона ячеек */
+    padding: 5px; /* Поля вокруг текста */
+	border: 1px solid grey; /* Параметры рамки */
+   }
+   
+   th{
+	  
+   }
+    tr:hover td{
+	   background: #E8E8E8;
+   }
+   
+ 

@@ -46,9 +46,9 @@
 		<div class="column small-6 medium-6 large-6"  style="padding:0;">
 		<ul>
 			<li><a href="vacancy.php">Вакансии</a></li>
-			<li><a href="2.html">Резюме</a></li>
-			<li><a href="3.html">Компании</a></li>
-			<li><a href="4.html">Группы</a></li>
+			<li><a href="resume.php">Резюме</a></li>
+			<li><a href="company.php">Компании</a></li>
+			<li><a href="group.php">Группы</a></li>
 		  </ul>
 		</div>
 		';
