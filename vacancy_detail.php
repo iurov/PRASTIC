@@ -23,53 +23,12 @@
 
 <body>
 	<!--Поисковая строка+название+кнопка входа-->
-	<div class="row" style="">
-		<div class="column small-2 medium-2 large-2" style="background:WHITE">
-			<p style="font-weight:bold; font-size:x-large;">Практики</p>
-		</div>
-		<div class="column small-8 medium-8 large-8" style="background:WHITE">
-			<form action="" method="get">
-			  <input name="s" placeholder="Искать здесь..." type="search""></input>
-			  <button type="submit">Поиск</button>
-			</form>
-		</div>
-		<div class="column small-2 medium-2 large-2" style="background:WHITE">
-			  <button type="submit" style=" background:white; color: black;">Войти</button>
-			 
-		</div>
-	</div>	
-	<div class="row" style="background:#343843; height:30px">
-		<!--Меню-->
-		<?php
-		echo
-		'
-		<div class="column small-6 medium-6 large-6" style="padding:0;">
-		<ul>
-			<li style="background: #BABBBD;"><a href="vacancy.php">Вакансии</a></li>
-			<li><a href="resume.php">Резюме</a></li>
-				<li><a href="company.php">Компании</a></li>
-				<li><a href="group.php">Группы</a></li>
-		  </ul>
-		</div>
-		';
-		if($role=='СТУДЕНТ')
-		echo'
-		<div class="column small-6 medium-6 large-6"  style="padding:0;">
-		<ul>
-			<li style="float:right;"><a href="1.html">Вакансии</a></li>
-			<li style="float:right;"><a href="2.html">Резюме</a></li>
-			<li style="float:right;"><a href="3.html">Компании</a></li>
-			<li style="float:right;"><a href="4.html">Группы</a></li>
-		  </ul>
-		</div>
-		';
-		
-		
-			
-		?>
-		
-		
-	</div>	
+	<?php include('search.php');?>
+	<!--Меню-->
+	<?php include('menu.php');?>
+	
+	
+	
 	<!--Контент-->	
 	<div class="row" style="background:#D4D4D3;">
 		<!--Меню-->
@@ -82,7 +41,7 @@
 		$name_company='2222222';//Название компании:
 		$student_dities='3333333';//Обязанности:
 		$student_welcome='4444444';//Приветствуется:
-		
+		$for_invalids='5555';
 		echo
 		'
 		<div class="column small-12 medium-12 large-12">
@@ -113,7 +72,7 @@
 		<br>
 		<p4>Условия для инвалидов:</p4>
 		<br>
-		<p3>'.$student_welcome.'</p3>
+		<p3>'.$for_invalids.'</p3>
 		<br>
 		<div style="float: right;"><button type="submit" align="right">Подать</button></div>
 		</div>
