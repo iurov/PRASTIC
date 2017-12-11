@@ -12,6 +12,6 @@
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
         PDO::ATTR_EMULATE_PREPARES   => false,
     ];
-    $db = new PDO($dsn, $user, $pass, $opt);
+    $pdo = new PDO($dsn, $user, $pass, $opt);
 ?>
 

@@ -1,57 +1,74 @@
 <!--Меню-->
 <div class="row" style="background:#343843; height:30px">
-	<?php
+	<?php //?role='.$role.'&idr='.$idr.' а зачем нам вообще это передавать каждый раз, да ещё и через get?????
 		echo
 		'
 			<div class="column small-6 medium-6 large-6"  style="padding:0;">
-				<ul>
-					<li><a href="vacancy.php?role='.$role.'&idr='.$idr.'">Вакансии</a></li>
-					<li><a href="resume.php?role='.$role.'&idr='.$idr.'">Резюме</a></li>
-					<li><a href="company.php?role='.$role.'&idr='.$idr.'">Компании</a></li>
-					<li><a href="group.php?role='.$role.'&idr='.$idr.'">Группы</a></li>
+				<ul class="menu">
+					<li><a href="vacancy.php">Вакансии</a></li>
+					<li><a href="resume.php">Резюме</a></li>
+					<li><a href="company.php">Компании</a></li>
+					<li><a href="group.php">Группы</a></li>
 				</ul>
 			</div>
 		';
 		
 		// АДминистратор
-		if($role=='RMAD')
+		if($role=='admin')
 		echo
 		'
 			<div class="column small-6 medium-6 large-6"  style="padding:0;">
-				<ul>
+				<ul class="menu align-right">
 					<li style="float:right;"><a href="1.html">Образец</a></li>
-					<li style="float:right;"><a href="2.html">Резюме</a></li>
+					<li style="float:right;"><a href="2.html">Группы</a></li>
 					<li style="float:right;"><a href="3.html">Заявки</a></li>
-					<li style="float:right;"><a href="options_right.php?role='.$role.'">Настройки</a></li>
+					<li style="float:right;"><a href="settings.php">Настройки</a></li>
 				</ul>
 			</div>
 		';
 		// СТудент
-		if($role=='RMST')
+		if($role=='student')
 		echo
 		'
 			<div class="column small-6 medium-6 large-6"  style="padding:0;">
-				<ul>
+				<ul class="menu align-right">
 					<li style="float:right;"><a href="1.html">Образец</a></li>
-					<li style="float:right;"><a href="2.html">Вакансии</a></li>
+					<li style="float:right;"><a href="2.html">Резюме</a></li>
 					<li style="float:right;"><a href="3.html">Заявки</a></li>
-					<li style="float:right;"><a href="options_right.php?role='.$role.'">Настройки</a></li>
+					<li style="float:right;"><a href="settings.php">Настройки</a></li>
 				</ul>
 			</div>
 		
 		';
 		// ПТеродактель
-		if($role=='RMPT')
+		if($role=='pterodactyl')
 		echo
 		'
 			<div class="column small-6 medium-6 large-6"  style="padding:0;">
-				<ul>
+				<ul class="menu align-right">
 					<li style="float:right;"><a href="1.html">Образец</a></li>
-					<li style="float:right;"><a href="2.html">Группы</a></li>
-					<li style="float:right;"><a href="3.html">Завяки</a></li>
-					<li style="float:right;"><a href="options_right.php?role='.$role.'">Настройки</a></li>
+					<li style="float:right;"><a href="2.html">Вакансии</a></li>
+					<li style="float:right;"><a href="3.html">Заявки</a></li>
+					<li style="float:right;"><a href="settings.php">Настройки</a></li>
 				</ul>
 			</div>
 		';
 	?>
 </div>
+
+<!-- выделение пунктов меню / косячненькое :с-->
+<script>
+$(function () {
+	var location = window.location.href;
+	var cur_url = location.split('/').pop();
+	
+	if(cur_url.search('_') != -1)
+		cur_url = cur_url.split('_').shift() + '.php';
+	
+	$('li').each(function () {
+		var link = $(this).find('a').attr('href');
+		if(cur_url == link) 
+			$(this).addClass('active');
+	});
+});
+</script>

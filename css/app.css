@@ -66,8 +66,8 @@ button:active { background: rgb(152,15,0); } /* при нажатии */
     display: inline-block; /* Строчно-блочные элементы */
     background: #343843; /* Цвет фона */
 	height:30px;
-	padding-left:10px;
-	padding-right:10px;
+	/*padding-left:10px;
+	padding-right:10px;*/
 	font-size:x-small;
  }
  
