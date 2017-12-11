@@ -5,7 +5,7 @@
 	unset($_SESSION['id']);
 	unset($_SESSION['role']);
 	
-	exit("<html><head><meta http-equiv='Refresh' content='0; URL=../index.php'></head></html>");
+	exit("<html><head><meta http-equiv='Refresh' content='0; URL=../vacancy.php'></head></html>");
 ?>
 
 

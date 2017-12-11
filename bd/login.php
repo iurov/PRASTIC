@@ -11,24 +11,18 @@
 	$stm->execute([$login]);
 	$res = $stm->fetch();
 	if (!$res)
-	// ПОКА ТАК ////
 	{
-		?>
-		<script>
-			alert("Извините, введённый вами логин неверный.");
-		</script>
-		<?
-		exit("<html><head><meta http-equiv='Refresh' content='0; URL=../index.php'></head></html>");
+		?> <script>
+			alert("Неверный логин");
+		</script> <?
+		exit("<html><head><meta http-equiv='Refresh' content='0; URL=../vacancy.php'></head></html>");
 	} 
-	/// ПОКА ТАК /////
 	else {
 		if ($res['password']!=md5($pswd)) {
-			?>
-			<script>
-				alert("Извините, введённый вами пароль неверный.");
-			</script>
-			<?
-			exit("<html><head><meta http-equiv='Refresh' content='0; URL=../index.php'></head></html>");
+			?> <script>
+				alert("Неверный пароль");
+			</script> <?
+			exit("<html><head><meta http-equiv='Refresh' content='0; URL=../vacancy.php'></head></html>");
 		}
 		else {
 			$_SESSION['login']=$res['username']; 
@@ -41,11 +35,11 @@
 			foreach ($tables as $nt) {
 				$stmt = $pdo->query('SELECT id FROM '.$nt.' WHERE id = '.$_SESSION['id']); //БАЙДА КАКАЯ-ТО :СССС
 				$res = $stmt->fetch();
-				if ($res)
+				if ($res)				// и здесь тоже :сссс 
 					$role = $nt;
 			}
 			$_SESSION['role']=$role;
-			exit("<html><head><meta http-equiv='Refresh' content='0; URL=../index.php'></head></html>");
+			exit("<html><head><meta http-equiv='Refresh' content='0; URL=../vacancy.php'></head></html>");
 		}
 	}
 ?>
