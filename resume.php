@@ -35,16 +35,16 @@
 		//$stmt = $db->query('SELECT * FROM resume'); ДЛЯ ОДНОЙ ТАБЛИЦЫ
 		//$stmt = $db->query('SELECT * FROM resume  INNER JOIN student ON resume.id_stud = student.id_stud'); ДЛЯ ДВУХ ТАБЛИЦ
 		$stmt = $db->query('SELECT * 
-		FROM resume  
-		LEFT JOIN person ON resume.id_stud = person.id_person
-		LEFT JOIN student ON resume.id_stud = student.id_stud
-		
+			FROM resume 
+			LEFT JOIN person ON resume.id_stud = person.id_person 
+			LEFT JOIN student ON resume.id_stud = student.id
+			LEFT JOIN groups ON student.studygroup = groups.id_group
 		');
 		while ($row = $stmt->fetch())
 		{
 		$skills=$row['skills'];//Навыки
 		$experience=$row['experience'];//Опыт работы
-		$group_student=$row['birthdate'];//Группа   birthdate
+		$group_student=$row['studygroup'];//Группа   birthdate
 		$name_sudent=$row['lastname'];//ФИО студента
 		$name_sudent.=' ' . $row['name'];
 		$name_sudent.=' ' . $row['fathername'];
