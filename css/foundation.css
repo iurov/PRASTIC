@@ -1831,7 +1831,9 @@ a.button:hover, a.button:focus {
     line-height: 1;
     text-decoration: none;
     display: block;
-    padding: 0.7rem 1rem; }
+    /*padding: 0.7rem 1rem; */
+	padding: 10 15;
+	}
   .menu input,
   .menu select,
   .menu a,
@@ -1942,7 +1944,8 @@ a.button:hover, a.button:focus {
     background: #2ba6cb;
     color: #fefefe; }
   .menu .active > a {
-    background: #2ba6cb;
+    /*background: #2ba6cb;*/
+	background: #BFC1C2;
     color: #fefefe; }
   .menu.align-left {
     -ms-flex-pack: start;

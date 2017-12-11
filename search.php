@@ -8,6 +8,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<!--Заголовок сайта-->
 	<title>Практика ДВФУ</title>
+	<link rel="stylesheet" href="css/style.css">
 	<!--Стили скачанного меню сайта-->
 	<link rel="stylesheet" href="css/main_menu.css" type="text/css">
 	<!--Стили foundation для разметки и стандартных элементов-->
@@ -18,8 +19,6 @@
 	<link rel="stylesheet" href="css/main_menu.css">
 </head>
 
-
-<link rel="stylesheet" href="css/style.css">
 <script src="js/jquery-3.2.1.min.js"></script>
 
 <div class="row" style="margin-top:10px;">
