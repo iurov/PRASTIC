@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Дек 10 2017 г., 14:31
+-- Время создания: Дек 11 2017 г., 10:45
 -- Версия сервера: 5.5.53
 -- Версия PHP: 7.1.0
 
@@ -27,18 +27,18 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `admin` (
-  `id_admin` int(10) UNSIGNED DEFAULT NULL
+  `id` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `admin`
 --
 
-INSERT INTO `admin` (`id_admin`) VALUES
+INSERT INTO `admin` (`id`) VALUES
 (1),
-(2),
 (4),
-(23);
+(23),
+(25);
 
 -- --------------------------------------------------------
 
@@ -78,7 +78,7 @@ CREATE TABLE `person` (
   `name` varchar(50) NOT NULL,
   `fathername` varchar(50) NOT NULL,
   `username` varchar(30) NOT NULL,
-  `password` varchar(30) NOT NULL,
+  `password` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   `telephone` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -88,28 +88,28 @@ CREATE TABLE `person` (
 --
 
 INSERT INTO `person` (`id_person`, `lastname`, `name`, `fathername`, `username`, `password`, `email`, `telephone`) VALUES
-(1, 'Кленина', 'Надежда', 'Викторовна', 'klenina_nv', 'klenina_nv', 'klenina_nv@dvfu.ru', '89145556677'),
-(2, 'Малыкина', 'Ирина', 'Анатольевна', 'malikina_ia', 'malikina_ia', 'malikina_ia@dvfu.ru', '89020004455'),
-(4, 'Олейников', 'Игорь', 'Сергеевич', 'oleynikov_is', 'oleynikov_is', 'oleynikov_is@dvfu.ru', '89247776699'),
-(5, 'Кронидов', 'Тимофей', 'Витальевич', 'kronidov_tv', 'kronidov_tv', 'kronidov_tv@yandex.ru', '88089996677'),
-(6, 'Овчинникова', 'Анна', 'Сергеевна', 'ovchanna', 'ovchanna', 'ovchanna@mail.ru', '89045558833'),
-(7, 'Степанова', 'Светлана', 'Геннадьевна', 'svetstep', 'svetstep', 'svetstep@gmail.com', '87034445566'),
-(8, 'Орлов', 'Илья', 'Юрьевич', 'ilya_orel', 'ilya_orel', 'ilya_orel@gmail.com', '89165557733'),
-(9, 'Крицкая', 'Мария', 'Евгеньевна', 'mary_kric', 'mary_kric', 'mary_kric@mail.ru', '83025553344'),
-(10, 'Тарасов', 'Сергей', 'Геннадьевич', 'tarasov_sg', 'tarasov_sg', 'tarasov_sg@yandex.ru', '89032224455'),
-(11, 'Бардаш', 'Алексей', 'Степанович', 'bardash', 'bardash', 'bardash@gmail.com', '89049992200'),
-(12, 'Сафронова', 'Екатерина', 'Владимировна', 'safronova', 'safronova', 'safronova@gmail.com', '89056669911'),
-(13, 'Скоропостижная', 'Александра', 'Святославовна', 'sashaskor', 'sashaskor', 'sashaskor@mail.ru', '89051113322'),
-(14, 'Андреева', 'Елена', 'Григорьевна', 'andreeva', 'andreeva', 'andreeva@gmail.com', '8907772244'),
-(15, 'Захаров', 'Валентин', 'Геннадьевич', 'zaharov', 'zaharov', 'zaharov@yandex.ru', '89046668822'),
-(16, 'Якимов', 'Владислав', 'Валерьевич', 'vlad_yak', 'vlad_yak', 'vlad_yak@gmail.com', '89023338855'),
-(17, 'Савинский', 'Александр', 'Владимирович', 'rostelekom', 'rostelekom', 'hr@rtk.ru', '2456789'),
-(18, 'Шепелев', 'Антон', 'Сергеевич', 'alians_tk', 'alians_tk', 'hr@alians_tk.ru', '2456734'),
-(19, 'Леонов', 'Влад', 'Семёнович', 'rm_soft', 'rm_soft', 'mail@rm_soft.ru', '2342321'),
-(20, 'Горунов', 'Илья', 'Владимирович', 'sozvezdie', 'sozvezdie', 'hr_mail@sozvezdie.ru', '2305611'),
-(21, 'Орлов', 'Кирилл', 'Витальевич', 'coral', 'coral', 'hr_mail@coral.ru', '2758934'),
-(23, 'Кленин', 'Александр', 'Сергеевич', 'klenin_as', 'klenin_as', 'klenin@gmail.com', '89145056677'),
-(24, 'Ефимов', 'Дмитрий', 'Сергеевич', 'vl_consult', 'vl_consult', 'hr_mail@vl_consult.ru', '2782310');
+(1, 'Кленина', 'Надежда', 'Викторовна', 'klenina_nv', '8832d150e179dc04a96d35af4176d07d', 'klenina_nv@dvfu.ru', '89145556677'),
+(4, 'Олейников', 'Игорь', 'Сергеевич', 'oleynikov_is', '1b60b18079450737f3e0c85870660275', 'oleynikov_is@dvfu.ru', '89247776699'),
+(5, 'Кронидов', 'Тимофей', 'Витальевич', 'kronidov_tv', '700739c88308a38f2e5cd1777d27eef8', 'kronidov_tv@yandex.ru', '88089996677'),
+(6, 'Овчинникова', 'Анна', 'Сергеевна', 'ovchanna', 'ebf68a8fb29fa8c652cd841733b2b5e7', 'ovchanna@mail.ru', '89045558833'),
+(7, 'Степанова', 'Светлана', 'Геннадьевна', 'svetstep', '5c9faf5faa5bba78a5062c1b4980e0b8', 'svetstep@gmail.com', '87034445566'),
+(8, 'Орлов', 'Илья', 'Юрьевич', 'ilya_orel', 'cef0da9e01dee492ff2635ac65974710', 'ilya_orel@gmail.com', '89165557733'),
+(9, 'Крицкая', 'Мария', 'Евгеньевна', 'mary_kric', '81073af95987fb43824ea2b694ac5e90', 'mary_kric@mail.ru', '83025553344'),
+(10, 'Тарасов', 'Сергей', 'Геннадьевич', 'tarasov_sg', '68ceaac3bf278f986298e245d4287dc6', 'tarasov_sg@yandex.ru', '89032224455'),
+(11, 'Бардаш', 'Алексей', 'Степанович', 'bardash', '941ec1ea45179c611a9291e740d1aa14', 'bardash@gmail.com', '89049992200'),
+(12, 'Сафронова', 'Екатерина', 'Владимировна', 'safronova', 'db9127195947cda528b2b8727aed5d6f', 'safronova@gmail.com', '89056669911'),
+(13, 'Скоропостижная', 'Александра', 'Святославовна', 'sashaskor', 'c82bb0de2404d8ef9d4246f2930eb6ef', 'sashaskor@mail.ru', '89051113322'),
+(14, 'Андреева', 'Елена', 'Григорьевна', 'andreeva', '44fc6e1e35359d97d836a6bb3bd536ce', 'andreeva@gmail.com', '8907772244'),
+(15, 'Захаров', 'Валентин', 'Геннадьевич', 'zaharov', 'afcc079e986210121f5bf4f3d6b0f367', 'zaharov@yandex.ru', '89046668822'),
+(16, 'Якимов', 'Владислав', 'Валерьевич', 'vlad_yak', '58663187dd3d6829f876270db4fa6342', 'vlad_yak@gmail.com', '89023338855'),
+(17, 'Савинский', 'Александр', 'Владимирович', 'rostelekom', '12d511c00e69e21606096c4c93bad4bc', 'hr@rtk.ru', '2456789'),
+(18, 'Шепелев', 'Антон', 'Сергеевич', 'alians_tk', '4b8a3cdd41639679dc798723f228c074', 'hr@alians_tk.ru', '2456734'),
+(19, 'Леонов', 'Влад', 'Семёнович', 'rm_soft', 'd27d8a7ade6a5b5ff874f815d96ddb3e', 'mail@rm_soft.ru', '2342321'),
+(20, 'Горунов', 'Илья', 'Владимирович', 'sozvezdie', '7b3183bc833f8e114965f4d8063e2a2f', 'hr_mail@sozvezdie.ru', '2305611'),
+(21, 'Орлов', 'Кирилл', 'Витальевич', 'coral', 'd2ebed4eaf58509dcc358e1782c38fea', 'hr_mail@coral.ru', '2758934'),
+(23, 'Кленин', 'Александр', 'Сергеевич', 'klenin_as', 'd2ebed4eaf58509dcc358e1782c38fea', 'klenin@gmail.com', '89145056677'),
+(24, 'Ефимов', 'Дмитрий', 'Сергеевич', 'vl_consult', '8dd2002ca9dd04ed11c60291f6a8b030', 'hr_mail@vl_consult.ru', '2782310'),
+(25, 'Малыкина', 'Ирина', 'Анатольевна', 'malikina_ia', '387dbe4d4488648a3e75a0d8ed75e44a', 'malikina_ia@dvfu.ru', '89035557733');
 
 -- --------------------------------------------------------
 
@@ -118,7 +118,7 @@ INSERT INTO `person` (`id_person`, `lastname`, `name`, `fathername`, `username`,
 --
 
 CREATE TABLE `pterodactyl` (
-  `id_pter` int(10) UNSIGNED NOT NULL,
+  `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(255) NOT NULL,
   `address` varchar(255) NOT NULL,
   `sphere` varchar(255) NOT NULL COMMENT 'сфера деятельности',
@@ -131,7 +131,7 @@ CREATE TABLE `pterodactyl` (
 -- Дамп данных таблицы `pterodactyl`
 --
 
-INSERT INTO `pterodactyl` (`id_pter`, `name`, `address`, `sphere`, `about`, `iscontract`, `contract`) VALUES
+INSERT INTO `pterodactyl` (`id`, `name`, `address`, `sphere`, `about`, `iscontract`, `contract`) VALUES
 (17, 'Ростелеком', 'г.Владивосток, пр-т Красного Знамени, 37 ', 'Телефонная связь, IP-телефония, кабельное телевидение, Интернет.', '\"Ростелеком\" – одна из крупнейших в России и Европе телекоммуникационных компаний, присутствующая во всех сегментах рынка услуг связи и охватывающая более 34 млн. домохозяйств в России.', 0, NULL),
 (18, 'АльянсТелеком', 'г.Владивосток, ул. Луговая, 21а ', 'Интернет и телевидение, видеонаблюдение для физических и юридических лиц.', 'Компания \"АльянсТелеком\" работает на рынке телекоммуникационных услуг с 2007 года. Образовавшись путем слияния двух операторов связи города Владивостока, ООО \"ОктопусНет\" и ООО \"ВладТелеКом\" (\"СтритНет\"), компания превратилась в провайдера города Владивостока, предоставив жителям доступ к современным телекоммуникационным услугам и Интернет-сервисам.\r\n\r\nМультимедийная сеть компании охватывает большую часть города, при этом компания постоянно расширяет свою транспортную сеть, подключая новые дома к быстрому Интернету и современному кабельному телевидению \"АльянсЦифра\".', 0, NULL),
 (19, 'РМ софт', 'г.Владивосток, ул. Карла Либкнехта, 10а', 'Разработка, продажа, сопровождение и обслуживание программного обеспечения.', 'ООО \"РМ Софт\".', 0, NULL),
@@ -188,7 +188,7 @@ INSERT INTO `resume` (`id_stud`, `skills`, `experience`, `additional`) VALUES
 --
 
 CREATE TABLE `student` (
-  `id_stud` int(10) UNSIGNED NOT NULL,
+  `id` int(10) UNSIGNED NOT NULL,
   `studygroup` int(10) UNSIGNED NOT NULL,
   `birthdate` date NOT NULL,
   `invalid` varchar(255) NOT NULL
@@ -198,7 +198,7 @@ CREATE TABLE `student` (
 -- Дамп данных таблицы `student`
 --
 
-INSERT INTO `student` (`id_stud`, `studygroup`, `birthdate`, `invalid`) VALUES
+INSERT INTO `student` (`id`, `studygroup`, `birthdate`, `invalid`) VALUES
 (5, 8, '1996-12-01', ''),
 (6, 8, '1997-05-06', ''),
 (7, 9, '1999-04-12', ''),
@@ -249,8 +249,8 @@ INSERT INTO `vacancy` (`id_vac`, `id_pter`, `about`, `practic`, `start`, `finish
 -- Индексы таблицы `admin`
 --
 ALTER TABLE `admin`
-  ADD UNIQUE KEY `id_admin_2` (`id_admin`),
-  ADD KEY `id_admin` (`id_admin`);
+  ADD UNIQUE KEY `id_admin_2` (`id`),
+  ADD KEY `id_admin` (`id`);
 
 --
 -- Индексы таблицы `groups`
@@ -274,7 +274,7 @@ ALTER TABLE `person`
 -- Индексы таблицы `pterodactyl`
 --
 ALTER TABLE `pterodactyl`
-  ADD UNIQUE KEY `id_pter` (`id_pter`);
+  ADD UNIQUE KEY `id_pter` (`id`);
 
 --
 -- Индексы таблицы `request`
@@ -293,8 +293,8 @@ ALTER TABLE `resume`
 -- Индексы таблицы `student`
 --
 ALTER TABLE `student`
-  ADD PRIMARY KEY (`id_stud`),
-  ADD UNIQUE KEY `id_stud` (`id_stud`),
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id_stud` (`id`),
   ADD KEY `studygroup` (`studygroup`);
 
 --
@@ -317,7 +317,7 @@ ALTER TABLE `groups`
 -- AUTO_INCREMENT для таблицы `person`
 --
 ALTER TABLE `person`
-  MODIFY `id_person` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id_person` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT для таблицы `vacancy`
 --
@@ -331,45 +331,45 @@ ALTER TABLE `vacancy`
 -- Ограничения внешнего ключа таблицы `admin`
 --
 ALTER TABLE `admin`
-  ADD CONSTRAINT `admin_ibfk_1` FOREIGN KEY (`id_admin`) REFERENCES `person` (`id_person`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `admin_ibfk_1` FOREIGN KEY (`id`) REFERENCES `person` (`id_person`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ограничения внешнего ключа таблицы `groups`
 --
 ALTER TABLE `groups`
-  ADD CONSTRAINT `groups_ibfk_1` FOREIGN KEY (`admin`) REFERENCES `admin` (`id_admin`);
+  ADD CONSTRAINT `groups_ibfk_1` FOREIGN KEY (`admin`) REFERENCES `admin` (`id`) ON DELETE SET NULL ON UPDATE NO ACTION;
 
 --
 -- Ограничения внешнего ключа таблицы `pterodactyl`
 --
 ALTER TABLE `pterodactyl`
-  ADD CONSTRAINT `pterodactyl_ibfk_1` FOREIGN KEY (`id_pter`) REFERENCES `person` (`id_person`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `pterodactyl_ibfk_1` FOREIGN KEY (`id`) REFERENCES `person` (`id_person`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ограничения внешнего ключа таблицы `request`
 --
 ALTER TABLE `request`
-  ADD CONSTRAINT `request_ibfk_1` FOREIGN KEY (`id_stud`) REFERENCES `student` (`id_stud`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `request_ibfk_2` FOREIGN KEY (`id_vac`) REFERENCES `vacancy` (`id_vac`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `request_ibfk_2` FOREIGN KEY (`id_vac`) REFERENCES `vacancy` (`id_vac`) ON DELETE CASCADE ON UPDATE NO ACTION,
+  ADD CONSTRAINT `request_ibfk_1` FOREIGN KEY (`id_stud`) REFERENCES `student` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
 -- Ограничения внешнего ключа таблицы `resume`
 --
 ALTER TABLE `resume`
-  ADD CONSTRAINT `resume_ibfk_1` FOREIGN KEY (`id_stud`) REFERENCES `student` (`id_stud`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `resume_ibfk_1` FOREIGN KEY (`id_stud`) REFERENCES `student` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ограничения внешнего ключа таблицы `student`
 --
 ALTER TABLE `student`
-  ADD CONSTRAINT `student_ibfk_2` FOREIGN KEY (`studygroup`) REFERENCES `groups` (`id_group`),
-  ADD CONSTRAINT `student_ibfk_1` FOREIGN KEY (`id_stud`) REFERENCES `person` (`id_person`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `student_ibfk_2` FOREIGN KEY (`studygroup`) REFERENCES `groups` (`id_group`) ON UPDATE NO ACTION,
+  ADD CONSTRAINT `student_ibfk_1` FOREIGN KEY (`id`) REFERENCES `person` (`id_person`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ограничения внешнего ключа таблицы `vacancy`
 --
 ALTER TABLE `vacancy`
-  ADD CONSTRAINT `vacancy_ibfk_1` FOREIGN KEY (`id_pter`) REFERENCES `pterodactyl` (`id_pter`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `vacancy_ibfk_1` FOREIGN KEY (`id_pter`) REFERENCES `pterodactyl` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

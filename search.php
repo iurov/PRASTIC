@@ -1,8 +1,23 @@
-<!--Поисковая строка+название+кнопка входа-->
-<?php 
-	$role = $_GET["role"];
+<?session_start();
+	$role = $_SESSION['role'];
 	$idr = $_GET["idr"];
+	include('db.php'); //подключение к БД
 ?>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<!--Заголовок сайта-->
+	<title>Практика ДВФУ</title>
+	<!--Стили скачанного меню сайта-->
+	<link rel="stylesheet" href="css/main_menu.css" type="text/css">
+	<!--Стили foundation для разметки и стандартных элементов-->
+	<link rel="stylesheet" href="css/foundation.css">
+	<!--Основные стили на сайте--> 
+	<link rel="stylesheet" href="css/app.css">
+	<!--Стили для главного меню--> 
+	<link rel="stylesheet" href="css/main_menu.css">
+</head>
+
 
 <link rel="stylesheet" href="css/style.css">
 <script src="js/jquery-3.2.1.min.js"></script>
@@ -24,18 +39,20 @@
 			<?php
 			if($role){
 				echo
-				'<button type="submit" style="float:right; background:white; color: black;">Выйти</button>';
-			}
-			else
-				echo
-				'<button type="submit" class="popup" iddiv="box_1" style="float:right; background:white; color: black;">Войти</button>';
-			  ?>
+				'<form action="bd/logout.php" method="POST">
+					<button type="submit" style="float:right; background:white; color: black;">Выйти</button>
+				</form>' ;
+			} else
+				echo '<button type="submit" class="popup" iddiv="box_1" style="float:right; background:white; color: black;">Войти</button>';
+			?>
+			
 		</div>
 	</div>	
  
+<!-- Всплывающее окно авторизации (форма и скрипт) -->
 <div id="myfond_gris" opendiv=""></div>
 <div id="box_1" class="mymagicoverbox_fenetre">
-	<form name="fr" method="post" action="">
+	<form name="fr" action="bd/login.php" method="post" action="">
 		<span style="padding:2%;">Вход</span>
 		<div>
 			<input name="login" type="text" class="authorize" placeholder="Логин">
