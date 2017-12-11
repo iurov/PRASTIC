@@ -14,42 +14,42 @@
 		';
 		
 		// АДминистратор
-		if($role=='RMAD')
+		if($role=='admin')
 		echo
 		'
 			<div class="column small-6 medium-6 large-6"  style="padding:0;">
 				<ul>
-					<li style="float:right;"><a href="1.html">Образец</a></li>
-					<li style="float:right;"><a href="2.html">Резюме</a></li>
-					<li style="float:right;"><a href="3.html">Заявки</a></li>
 					<li style="float:right;"><a href="options_right.php?role='.$role.'">Настройки</a></li>
+					<li style="float:right;"><a href="3.html">Заявки</a></li>
+					<li style="float:right;"><a href="2.html">Группы</a></li>
+					<li style="float:right;"><a href="1.html">Образец</a></li>
 				</ul>
 			</div>
 		';
 		// СТудент
-		if($role=='RMST')
+		if($role=='student')
 		echo
 		'
 			<div class="column small-6 medium-6 large-6"  style="padding:0;">
 				<ul>
-					<li style="float:right;"><a href="1.html">Образец</a></li>
-					<li style="float:right;"><a href="2.html">Вакансии</a></li>
-					<li style="float:right;"><a href="3.html">Заявки</a></li>
 					<li style="float:right;"><a href="options_right.php?role='.$role.'">Настройки</a></li>
+					<li style="float:right;"><a href="3.html">Заявки</a></li>
+					<li style="float:right;"><a href="2.html">Резюме</a></li>
+					<li style="float:right;"><a href="1.html">Образец</a></li>
 				</ul>
 			</div>
 		
 		';
 		// ПТеродактель
-		if($role=='RMPT')
+		if($role=='pterodactyl')
 		echo
 		'
 			<div class="column small-6 medium-6 large-6"  style="padding:0;">
 				<ul>
-					<li style="float:right;"><a href="1.html">Образец</a></li>
-					<li style="float:right;"><a href="2.html">Группы</a></li>
-					<li style="float:right;"><a href="3.html">Завяки</a></li>
 					<li style="float:right;"><a href="options_right.php?role='.$role.'">Настройки</a></li>
+					<li style="float:right;"><a href="3.html">Заявки</a></li>
+					<li style="float:right;"><a href="2.html">Вакансии</a></li>
+					<li style="float:right;"><a href="1.html">Образец</a></li>
 				</ul>
 			</div>
 		';

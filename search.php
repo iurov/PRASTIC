@@ -55,8 +55,8 @@
 	<form name="fr" action="bd/login.php" method="post" action="">
 		<span style="padding:2%;">Вход</span>
 		<div>
-			<input name="login" type="text" class="authorize" placeholder="Логин">
-			<input name="pass" type="password" class="authorize" placeholder="Пароль">
+			<input name="login" type="text" class="authorize" placeholder="Логин" required>
+			<input name="pass" type="password" class="authorize" placeholder="Пароль" required>
 		</div>
 		<div class="row"><span><a href="#" style="float:left; color:#7E8AA0; font-size:16px">Регистрация</a></span></div>
 		<div class="row" style="float:right"><button type="submit" >Войти</button></div>
